@@ -1,0 +1,59 @@
+<html lang="pt-BR">
+<head>
+    <!--
+  Nome: Amanda Luiza Dias Santos    N°2        Turma: 3°B
+  Nome: Erick Oiveira Gomes         N°8 
+  Nome: Isadora Cassioti Teodoro    N°13
+  Nome: Patrick Gomes de Sousa      N°25                                                           
+    -->
+    <meta charset="UTF-8">
+    <title> Jogo </title>
+    <script src="game.js" defer></script>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #000;
+        }
+
+        #GameOverContainer, #VocêGanhouContainer {
+            display: none;
+            position: absolute;
+            text-align: center;
+        }
+        #vocêPerdeu, #VocêGanhou {
+            font-size: 55px;
+            color: white;
+        }
+        
+        #buttonReiniciar {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 25px;
+            border-radius: 20px;
+        }
+
+        #buttonReiniciar:hover{
+            color: brown;
+        }
+        
+    </style>
+</head>
+<body onload="iniciarJogo()">
+    <div id="GameOverContainer">
+        <div id="vocêPerdeu">Você Perdeu!</div>
+        <button id="buttonReiniciar" onclick="reiniciarJogo()">Jogar Novamente</button>
+    </div>
+    <div id="VocêGanhouContainer">
+        <div id="VocêGanhou">Você Ganhou!</div>
+        <button id="buttonReiniciar" onclick="reiniciarJogo()">Jogar Novamente</button>
+    </div>
+    <canvas id="gameCanvas" width="1280px" height="800" style="border:1px solid #fff;"></canvas>
+</body>
+</html>
